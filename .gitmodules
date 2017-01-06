@@ -1,0 +1,3 @@
+[submodule "g-2/beagle-code"]
+	path = g-2/beagle-code
+	url = https://github.com/atfienberg/beagle-code.git
