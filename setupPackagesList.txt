@@ -1,0 +1,5 @@
+cppzmq
+pyzmq-15.2.0
+setproctitle-1.1.10
+spidev-3.2
+zeromq-4.1.5
