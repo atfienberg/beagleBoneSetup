@@ -24,9 +24,9 @@ def main():
         sys.exit(0)
         
     bk = serial.Serial('/dev/' + sys.argv[1], 4800, timeout=0.5)
-    bk.write('*IDN?\n')
-    resp = read_response(bk)
     bk.write('SOUR:CURR 0.005\n')
+    resp = read_response(bk)
+    bk.write('*IDN?\n')
     resp = read_response(bk)
     if resp[:-1] in SERIALS:      
         print('bknum=%i' % (SERIALS.index(resp[:-1]) + 1))
