@@ -6,5 +6,6 @@ if [[ $# < 1 ]]; then
 fi
 year=`date -u +%F`
 time=`date -u +%T`
-scp gm2beagle.tar.gz root@$1:/home
+#scp gm2beagle.tar.gz root@$1:/home
+scp -r g-2 root@$1:/home
 ssh root@$1 "date --set $year; date --set $time; hwclock --systohc; pushd /home; tar xfzv gm2beagle.tar.gz; rm gm2beagle.tar.gz; pushd g-2; ./installEverything.sh; popd; popd"
