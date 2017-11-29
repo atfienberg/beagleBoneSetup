@@ -2,7 +2,7 @@
 
 pushd /home/g-2/setupPackages
 
-pushd zeromq-4.1.5; ./configure; make; make install; ldconfig; popd;
+pushd zeromq-4.2.1; ./configure; make; make install; ldconfig; popd;
 
 cp cppzmq/zmq*hpp /usr/local/include
 
